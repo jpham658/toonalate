@@ -24,8 +24,9 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `body {
     height: 400px;
     width: 400px;
-    background-color: red;
-}`, "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,YAAY;IACZ,qBAAqB;AACzB","sourcesContent":["body {\r\n    height: 400px;\r\n    width: 400px;\r\n    background-color: red;\r\n}"],"sourceRoot":""}]);
+    background-color: rgb(207, 243, 207);
+    color: rgb(14, 18, 14);
+}`, "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,YAAY;IACZ,oCAAoC;IACpC,sBAAsB;AAC1B","sourcesContent":["body {\r\n    height: 400px;\r\n    width: 400px;\r\n    background-color: rgb(207, 243, 207);\r\n    color: rgb(14, 18, 14);\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -100,8 +101,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const handleClick = (e) => {
+    console.log("click");
+};
 const test = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null,
-    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Hello World")));
+    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Toonalate"),
+    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { onClick: handleClick }, "Translate text")));
 const container = document.createElement("div");
 document.body.appendChild(container);
 const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container);

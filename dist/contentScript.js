@@ -2,32 +2,25 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/contentScript/contentScript.ts":
-/*!********************************************!*\
-  !*** ./src/contentScript/contentScript.ts ***!
-  \********************************************/
+/***/ "./src/contentScript/index.ts":
+/*!************************************!*\
+  !*** ./src/contentScript/index.ts ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var jcrop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jcrop */ "./node_modules/jcrop/build/js/jcrop.js");
 
 
+window.addEventListener("mouseup", (event) => {
+    console.log("Clicked!");
+});
 
-// document.addEventListener("click", (event) => {
-//     const clicked = event.target;
-//     if(clicked instanceof HTMLElement){
-//         chrome.runtime.sendMessage({
-//             action: "clickElement",
-//             html: clicked.outerHTML
-//         })
-//     }
-// });
-
-document.addEventListener("click", function(){
-    console.log("Hello world!")
-  });
+async () => {
+    const response = await chrome.runtime.sendMessage({message: "screenshot"});
+    console.log(response);
+}
 
 /***/ })
 
@@ -191,7 +184,7 @@ document.addEventListener("click", function(){
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_jcrop_build_js_jcrop_js-node_modules_jquery_dist_jquery_js"], () => (__webpack_require__("./src/contentScript/contentScript.ts")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_jquery_dist_jquery_js"], () => (__webpack_require__("./src/contentScript/index.ts")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -1,5 +1,6 @@
 body {
     height: 400px;
     width: 400px;
-    background-color: red;
+    background-color: rgb(207, 243, 207);
+    color: rgb(14, 18, 14);
 }
